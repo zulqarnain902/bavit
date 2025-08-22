@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
+
 import { Search, Edit, Trash2, Plus } from "lucide-react";
 
 export default function ViewUserCategory() {
@@ -13,15 +15,15 @@ export default function ViewUserCategory() {
 
   return (
     <div className="flex min-h-screen bg-gray-100">
-      {/* Sidebar */}
-      <aside className="w-20 bg-red-700 flex flex-col items-center py-5 space-y-6 shadow-lg">
-        <img src="/logo.png" alt="Logo" className="w-12 h-12 rounded" />
-        <div className="flex flex-col space-y-6 text-white text-xl">
-          <span>🏠</span>
-          <span>👥</span>
-          <span>📦</span>
-          <span>⚙️</span>
-        </div>
+      {/* Sidebar */}     
+      <aside className="w-60 bg-red-700 flex flex-col py-5 text-white shadow-lg">
+        <div className="px-5 text-xl font-bold">BAVIT</div>
+        <ul className="mt-6 space-y-3 px-5 text-gray-200">
+          <li className="hover:text-white cursor-pointer">Dashboard</li>
+          <li className="hover:text-white cursor-pointer">Users</li>
+          <li className="hover:text-white cursor-pointer">Suppliers</li>
+          <li className="hover:text-white cursor-pointer">Inventory</li>
+        </ul>
       </aside>
 
       {/* Main Content */}
@@ -48,9 +50,12 @@ export default function ViewUserCategory() {
               className="pl-10 pr-4 py-2 border rounded-lg w-full focus:outline-none focus:ring focus:ring-red-300"
             />
           </div>
-          <button className="flex items-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">
-            <Plus size={18} className="mr-2" /> Add User Category
-          </button>
+          <Link
+          href="/user-management/add-user-category"
+          className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg shadow"
+        >
+          + Add User Category
+        </Link>
         </div>
 
         {/* Filters / Config */}
