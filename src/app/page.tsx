@@ -3,6 +3,9 @@ import { Bell, Search, User, ChevronDown, Calendar } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import Link from "next/link";
+import DashboardStats from "../components/DashboardStats";
+import SalesByLocation from "../components/SalesByLocation";
+
 
 const data = [
   { name: "Canada", value: 75 },
@@ -104,44 +107,14 @@ export default function Dashboard() {
           ))}
         </div>
 
-        {/* Revenue & Sales */}
-        <div className="grid grid-cols-3 gap-6">
-          {/* Revenue */}
-          <Card className="col-span-2 shadow-md">
-            <CardContent className="p-6">
-              <h3 className="text-lg font-semibold mb-4">Revenue</h3>
-              <div className="flex justify-between text-gray-600">
-                <p>7,585 Orders</p>
-                <p>$22.89k Earnings</p>
-                <p>367 Refunds</p>
-                <p>18.92% Conversation Ratio</p>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Sales by Locations */}
-          <Card className="shadow-md">
-            <CardContent className="p-6">
-              <h3 className="text-lg font-semibold mb-4">Sales by Locations</h3>
-              <ResponsiveContainer width="100%" height={200}>
-                <PieChart>
-                  <Pie
-                    data={data}
-                    cx="50%"
-                    cy="50%"
-                    outerRadius={80}
-                    dataKey="value"
-                  >
-                    {data.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index]} />
-                    ))}
-                  </Pie>
-                  <Tooltip />
-                </PieChart>
-              </ResponsiveContainer>
-            </CardContent>
-          </Card>
-        </div>
+          <div className="p-6 bg-gray-50 min-h-screen grid grid-cols-3 gap-6">
+      <div className="col-span-2">
+        <DashboardStats />
+      </div>
+      <div>
+        <SalesByLocation />
+      </div>
+    </div>
       </div>
     </div>
   );
