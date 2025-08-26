@@ -37,7 +37,7 @@ export default function AddUserCategory() {
   return (
     <div className="flex min-h-screen bg-gray-100">
       {/* Sidebar */}
-      <aside className="w-60 bg-red-700 flex flex-col py-5 text-white shadow-lg">
+      <aside className="w-60 bg-red-900 flex flex-col py-5 text-white shadow-lg">
         <div className="px-5 text-xl font-bold">BuildMyRig</div>
         <ul className="mt-6 space-y-3 px-5 text-gray-200">
           <li className="hover:text-white cursor-pointer">Dashboard</li>
