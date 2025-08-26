@@ -19,7 +19,7 @@ export default function ViewUserCategory() {
       <div className="flex-1 p-6 ml-64">
         {/* Top Bar */}
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-2xl font-bold">View Users Category</h1>
+          <h1 className="text-2xl font-bold">View Teams</h1>
           <div className="flex items-center space-x-3">
             <span className="bg-gray-200 text-gray-800 px-3 py-1 rounded-lg">SUPER ADMIN</span>
           </div>
