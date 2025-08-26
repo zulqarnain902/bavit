@@ -1,8 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-
-import { Search, Edit, Trash2, Plus } from "lucide-react";
+import { Search, Edit, Trash2 } from "lucide-react";
 
 export default function ViewUserCategory() {
   const [categories] = useState([
@@ -15,19 +14,41 @@ export default function ViewUserCategory() {
 
   return (
     <div className="flex min-h-screen bg-gray-100">
-      {/* Sidebar */}     
-      <aside className="w-60 bg-red-900 flex flex-col py-5 text-white shadow-lg">
-        <div className="px-5 text-xl  font-bold">Buil My Rig</div>
-        <ul className="mt-6 space-y-3 px-5 text-gray-200">
-          <li className="hover:text-white cursor-pointer">Dashboard</li>
-          <li className="hover:text-white cursor-pointer">Users</li>
-          <li className="hover:text-white cursor-pointer">Suppliers</li>
-          <li className="hover:text-white cursor-pointer">Inventory</li>
-        </ul>
+      {/* ✅ Replaced Old Sidebar with Your Provided Sidebar */}
+      <aside className="w-64 bg-[#731717] text-white flex flex-col p-4 fixed h-screen">
+        <h1 className="text-2xl font-bold mb-6">BUILD MY RIG</h1>
+        <nav className="space-y-3">
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+            1. Dashboard
+          </p>
+          <details className="group">
+            <summary className="cursor-pointer hover:bg-red-700 p-2 rounded">
+              2. Users
+            </summary>
+            <ul className="ml-4 space-y-1 mt-1">
+              <Link href="/user-management/view-user-category">
+                <li className="cursor-pointer hover:text-red-300">
+                  2.1 View User Category
+                </li>
+              </Link>
+              <li className="cursor-pointer hover:text-red-300">2.2 View Teams</li>
+              <li className="cursor-pointer hover:text-red-300">2.3 View Users</li>
+            </ul>
+          </details>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">3. Suppliers</p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">4. Inventory</p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">5. Bundles</p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">6. Shipping & Labels</p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">7. Delivery</p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">8. Replacements</p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">9. Complaints</p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">10. Ticketing</p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">11. Customer Tracking</p>
+        </nav>
       </aside>
 
-      {/* Main Content */}
-      <div className="flex-1 p-6">
+      {/* ✅ Main Content Adjusted with Margin */}
+      <div className="flex-1 p-6 ml-64">
         {/* Top Bar */}
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-bold">View Users Category</h1>
@@ -51,14 +72,14 @@ export default function ViewUserCategory() {
             />
           </div>
           <Link
-          href="/user-management/add-user-category"
-          className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg shadow"
-        >
-          + Add User Category
-        </Link>
+            href="/user-management/add-user-category"
+            className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg shadow"
+          >
+            + Add User Category
+          </Link>
         </div>
 
-        {/* Filters / Config */}
+        {/* Filters */}
         <div className="flex justify-between items-center mb-4">
           <div className="text-green-600 font-medium">10 records</div>
           <button className="bg-gray-200 px-3 py-1 rounded-lg">Columns</button>

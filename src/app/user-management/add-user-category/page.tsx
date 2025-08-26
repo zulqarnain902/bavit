@@ -16,11 +16,7 @@ export default function AddUserCategory() {
   ];
 
   const handleSelectAll = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.checked) {
-      setPermissions(allPermissions);
-    } else {
-      setPermissions([]);
-    }
+    setPermissions(e.target.checked ? allPermissions : []);
   };
 
   const handlePermissionChange = (perm: string) => {
@@ -37,18 +33,42 @@ export default function AddUserCategory() {
   return (
     <div className="flex min-h-screen bg-gray-100">
       {/* Sidebar */}
-      <aside className="w-60 bg-red-900 flex flex-col py-5 text-white shadow-lg">
-        <div className="px-5 text-xl font-bold">BuildMyRig</div>
-        <ul className="mt-6 space-y-3 px-5 text-gray-200">
-          <li className="hover:text-white cursor-pointer">Dashboard</li>
-          <li className="hover:text-white cursor-pointer">Users</li>
-          <li className="hover:text-white cursor-pointer">Suppliers</li>
-          <li className="hover:text-white cursor-pointer">Inventory</li>
-        </ul>
+      <aside className="w-64 bg-[#731717] text-white flex flex-col p-4 fixed h-screen shadow-lg">
+        <h1 className="text-2xl font-bold mb-6">BUILD MY RIG</h1>
+        <nav className="space-y-3">
+          <Link href="/dashboard">
+            <p className="cursor-pointer hover:bg-red-700 p-2 rounded">1. Dashboard</p>
+          </Link>
+
+          <details className="group">
+            <summary className="cursor-pointer hover:bg-red-700 p-2 rounded">
+              2. Users
+            </summary>
+            <ul className="ml-4 space-y-1 mt-1">
+              <Link href="/user-management/view-user-category">
+                <li className="cursor-pointer hover:text-red-300">
+                  2.1 View User Category
+                </li>
+              </Link>
+              <li className="cursor-pointer hover:text-red-300">2.2 View Teams</li>
+              <li className="cursor-pointer hover:text-red-300">2.3 View Users</li>
+            </ul>
+          </details>
+
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">3. Suppliers</p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">4. Inventory</p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">5. Bundles</p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">6. Shipping & Labels</p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">7. Delivery</p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">8. Replacements</p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">9. Complaints</p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">10. Ticketing</p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">11. Customer Tracking</p>
+        </nav>
       </aside>
 
-      {/* Main Form */}
-      <div className="flex-1 p-6">
+      {/* Main Content */}
+      <div className="flex-1 p-6 ml-64">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-bold">Add User Category</h1>
           <Link
@@ -59,6 +79,7 @@ export default function AddUserCategory() {
           </Link>
         </div>
 
+        {/* Form */}
         <form
           onSubmit={handleSubmit}
           className="bg-white p-6 rounded-lg shadow-lg space-y-5"
