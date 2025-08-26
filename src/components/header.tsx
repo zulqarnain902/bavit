@@ -2,17 +2,20 @@ import React from "react";
 import Image from "next/image";
 import { Bell, Calendar, Maximize2, Menu } from "lucide-react";
 
-const Header: React.FC = () => {
+const Header: React.FC<{ onToggle: () => void }> = ({ onToggle }) => {
   return (
     <header className="w-full fixed top-0 left-0 bg-white shadow-md z-50">
       <div className="flex items-center justify-between px-4 py-2">
         <div className="flex items-center gap-4">
-          <button className="p-2 rounded-md hover:bg-gray-100">
+          <button
+            onClick={onToggle}
+            className="p-2 rounded-md hover:bg-gray-100"
+          >
             <Menu size={24} className="text-gray-700" />
           </button>
-          <div className="flex items-center  gap-2">
+          <div className="flex items-center gap-2">
             <Image
-              src="/logo.png" 
+              src="/logo.png"
               alt="Logo"
               width={45}
               height={45}
@@ -37,7 +40,7 @@ const Header: React.FC = () => {
 
           <div className="flex items-center gap-2 cursor-pointer">
             <Image
-              src="/user.png" 
+              src="/user.png"
               alt="User"
               width={35}
               height={35}

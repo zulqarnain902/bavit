@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-const Sidebar = () => {
+const Sidebar = ({ className }: { className?: string }) => {
   return (
-    <aside className="w-64 bg-[#731717] text-white flex flex-col p-4 fixed h-screen">
+    <aside className={`w-64 bg-[#731717] text-white flex flex-col p-4 fixed h-screen ${className}`}>
       <h1 className="text-2xl font-bold mb-6">BUILD MY RIG</h1>
       <nav className="space-y-3">
         <Link href="/">

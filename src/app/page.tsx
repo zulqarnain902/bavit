@@ -1,20 +1,29 @@
 "use client";
 import { Bell, Search, User, ChevronDown, Calendar } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import DashboardStats from "../components/DashboardStats";
 import SalesByLocation from "../components/SalesByLocation";
 import Sidebar from "../components/Sidebar";
 
+const data = [
+	{ name: "Canada", value: 75 },
+	{ name: "USA", value: 15 },
+	{ name: "UK", value: 10 },
+];
+
+const COLORS = ["#E74C3C", "#3498DB", "#2ECC71"];
+
 export default function Dashboard() {
 	return (
-		<div className="flex min-h-screen w-full bg-gray-100">
+		<div className="flex flex-col md:flex-row min-h-screen w-full bg-gray-100">
 			{/* Sidebar */}
-			<Sidebar />
+			<Sidebar className="w-full md:w-64" />
 
 			{/* Main Content */}
-			<div className="flex-1 p-6 ml-64">
+			<div className="flex-1 p-6">
 				{/* Top Navbar */}
-				<div className="flex justify-between items-center mb-6  ">
+				<div className="flex flex-wrap justify-between items-center mb-6">
 					<h2 className="text-lg font-semibold">
 						Good Morning, Build My Rig!
 					</h2>
@@ -29,7 +38,7 @@ export default function Dashboard() {
 				</div>
 
 				{/* Stats Cards */}
-				<div className="grid grid-cols-4 gap-4 mb-6">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
 					{[
 						{ title: "Total Earnings", value: "$560.0k", change: "+16.24%" },
 						{ title: "Orders", value: "36,894", change: "-3.57%" },
@@ -46,8 +55,8 @@ export default function Dashboard() {
 					))}
 				</div>
 
-				<div className="p-6 bg-gray-50 min-h-screen grid grid-cols-3 gap-6">
-					<div className="col-span-2">
+				<div className="p-6 bg-gray-50 min-h-screen grid grid-cols-1 lg:grid-cols-3 gap-6">
+					<div className="lg:col-span-2">
 						<DashboardStats />
 					</div>
 					<div>
