@@ -17,12 +17,9 @@ const COLORS = ["#E74C3C", "#3498DB", "#2ECC71"];
 export default function Dashboard() {
 	return (
 		<div className="flex min-h-screen w-full bg-gray-100">
-			{/* Sidebar */}
 			<Sidebar />
 
-			{/* Main Content */}
 			<div className="flex-1 p-6 ml-64">
-				{/* Top Navbar */}
 				<div className="flex justify-between items-center mb-6  ">
 					<h2 className="text-lg font-semibold">
 						Good Morning, Build My Rig!
@@ -37,7 +34,6 @@ export default function Dashboard() {
 					</div>
 				</div>
 
-				{/* Stats Cards */}
 				<div className="grid grid-cols-4 gap-4 mb-6">
 					{[
 						{ title: "Total Earnings", value: "$560.0k", change: "+16.24%" },
