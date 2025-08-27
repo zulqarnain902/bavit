@@ -5,15 +5,17 @@ import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import DashboardStats from "../components/DashboardStats";
 import SalesByLocation from "../components/SalesByLocation";
 import Sidebar from "../components/Sidebar";
+import BestSellingProducts from "@/components/BestSellingProducts";
+import TopSellers from "@/components/TopSellers";
+import StoreVisitsChart from "@/components/StoreVisitsChart";
+import RecentOrders from "@/components/RecentOrders";
 
 const data = [
 	{ name: "Canada", value: 75 },
 	{ name: "USA", value: 15 },
 	{ name: "UK", value: 10 },
 ];
-
 const COLORS = ["#E74C3C", "#3498DB", "#2ECC71"];
-
 export default function Dashboard() {
 	return (
 		<div className="flex min-h-screen w-full bg-gray-100">
@@ -51,12 +53,28 @@ export default function Dashboard() {
 					))}
 				</div>
 
-				<div className="p-6 bg-gray-50 min-h-screen grid grid-cols-3 gap-6">
+				<div className="p-6 bg-gray-50 grid grid-cols-3 gap-6">
 					<div className="col-span-2">
 						<DashboardStats />
 					</div>
 					<div>
 						<SalesByLocation />
+					</div>
+				</div>
+				<div className="bg-gray-50 grid grid-cols-3 gap-6">
+					<div className="lg:col-span-1">
+						<BestSellingProducts />
+					</div>
+					<div className="lg:col-span-2">
+						<TopSellers />
+					</div>
+				</div>
+				<div className="bg-gray-50 grid grid-cols-3 gap-6 mt-6">
+					<div className="lg:col-span-1">
+						<StoreVisitsChart />
+					</div>
+					<div className="lg:col-span-2">
+						<RecentOrders />
 					</div>
 				</div>
 			</div>
