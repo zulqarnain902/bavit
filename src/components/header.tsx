@@ -4,9 +4,10 @@ import { Bell, Calendar, Maximize2, Menu } from "lucide-react";
 
 interface HeaderProps {
   onToggleSidebar: () => void;
+  onExpand: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ onToggleSidebar }) => {
+const Header: React.FC<HeaderProps> = ({ onToggleSidebar, onExpand }) => {
   return (
     <header className="w-full fixed top-0 left-0 bg-white shadow-md z-50">
       <div className="flex items-center justify-between px-4 py-2">
@@ -35,7 +36,10 @@ const Header: React.FC<HeaderProps> = ({ onToggleSidebar }) => {
           <button className="p-2 rounded-full hover:bg-gray-100">
             <Calendar size={22} className="text-gray-700" />
           </button>
-          <button className="p-2 rounded-full hover:bg-gray-100">
+          <button
+            onClick={onExpand}
+            className="p-2 rounded-full hover:bg-gray-100"
+          >
             <Maximize2 size={22} className="text-gray-700" />
           </button>
           <button className="relative p-2 rounded-full hover:bg-gray-100">
