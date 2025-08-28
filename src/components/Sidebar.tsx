@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { SlArrowRight } from "react-icons/sl";
+
 const Sidebar = () => {
   return (
-    <aside className="w-64 bg-[#731717] text-white flex flex-col p-4 fixed h-screen">
+    <aside className="w-64 bg-[#731717] text-white flex flex-col p-4 fixed top-0 left-0 h-screen overflow-y-auto scrollbar-thin scrollbar-thumb-red-700 scrollbar-track-[#731717]">
       <h4 className="text-1rem text-blue-300 font-bold mb-6">BUILD MY RIG</h4>
       <nav className="space-y-3">
         {/* Dashboard */}
@@ -16,7 +17,6 @@ const Sidebar = () => {
         <details className="group">
           <summary className="flex items-center justify-between cursor-pointer hover:bg-red-700 p-2 rounded list-none">
             2. Users
-            {/* Custom Arrow */}
             <span className="transition-transform duration-200 group-open:rotate-90">
               <SlArrowRight />
             </span>
@@ -86,6 +86,45 @@ const Sidebar = () => {
         </p>
         <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
           11. Customer Tracking
+        </p>
+
+        {/* Newly Added Sections */}
+        <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+          14. HR Management
+        </p>
+        <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+          15. Accounting
+        </p>
+        <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+          16. Payroll
+        </p>
+        <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+          17. Content Management
+        </p>
+        <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+          18. Marketing
+        </p>
+        <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+          19. Gamers Community
+        </p>
+        <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+          20. Documents
+        </p>
+        <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+          21. Calendar
+        </p>
+        <p className="cursor-pointer hover:bg-red-700 p-2 rounded">22. Leads</p>
+        <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+          23. Policies
+        </p>
+        <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+          24. Guides
+        </p>
+        <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+          25. Chat Management
+        </p>
+        <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+          26. System Settings
         </p>
       </nav>
     </aside>
