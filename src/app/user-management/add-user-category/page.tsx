@@ -37,7 +37,9 @@ export default function AddUserCategory() {
         <h1 className="text-2xl font-bold mb-6">BUILD MY RIG</h1>
         <nav className="space-y-3">
           <Link href="/dashboard">
-            <p className="cursor-pointer hover:bg-red-700 p-2 rounded">1. Dashboard</p>
+            <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+              1. Dashboard
+            </p>
           </Link>
 
           <details className="group">
@@ -50,20 +52,42 @@ export default function AddUserCategory() {
                   2.1 View User Category
                 </li>
               </Link>
-              <li className="cursor-pointer hover:text-red-300">2.2 View Teams</li>
-              <li className="cursor-pointer hover:text-red-300">2.3 View Users</li>
+              <li className="cursor-pointer hover:text-red-300">
+                2.2 View Teams
+              </li>
+              <li className="cursor-pointer hover:text-red-300">
+                2.3 View Users
+              </li>
             </ul>
           </details>
 
-          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">3. Suppliers</p>
-          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">4. Inventory</p>
-          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">5. Bundles</p>
-          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">6. Shipping & Labels</p>
-          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">7. Delivery</p>
-          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">8. Replacements</p>
-          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">9. Complaints</p>
-          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">10. Ticketing</p>
-          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">11. Customer Tracking</p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+            3. Suppliers
+          </p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+            4. Inventory
+          </p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+            5. Bundles
+          </p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+            6. Shipping & Labels
+          </p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+            7. Delivery
+          </p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+            8. Replacements
+          </p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+            9. Complaints
+          </p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+            10. Ticketing
+          </p>
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+            11. Customer Tracking
+          </p>
         </nav>
       </aside>
 

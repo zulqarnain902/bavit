@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Ensure global scrolling is enabled */
+html, body {
+    overflow: auto;
+    height: auto;
+}

@@ -18,7 +18,7 @@ const data = [
 const COLORS = ["#E74C3C", "#3498DB", "#2ECC71"];
 export default function Dashboard() {
 	return (
-		<div className="flex min-h-screen w-full bg-gray-100">
+		<div className="flex min-h-screen w-full bg-gray-100 overflow-auto">
 			<Sidebar />
 
 			<div className="flex-1 p-6 ml-64">
@@ -52,7 +52,6 @@ export default function Dashboard() {
 						</Card>
 					))}
 				</div>
-
 				<div className="p-6 bg-gray-50 grid grid-cols-3 gap-6">
 					<div className="col-span-2">
 						<DashboardStats />
@@ -69,11 +68,11 @@ export default function Dashboard() {
 						<TopSellers />
 					</div>
 				</div>
-				<div className="bg-gray-50 grid grid-cols-3 gap-6 mt-6">
+				<div className="bg-gray-50 grid grid-cols-2 gap-6 mt-6">
 					<div className="lg:col-span-1">
 						<StoreVisitsChart />
 					</div>
-					<div className="lg:col-span-2">
+					<div className="lg:col-span-1">
 						<RecentOrders />
 					</div>
 				</div>

@@ -60,7 +60,6 @@ const BestSellingProducts: React.FC = () => {
       date: "11 Feb 2021",
       outOfStock: true,
     },
-    
   ];
 
   const startIndex = (currentPage - 1) * productsPerPage;

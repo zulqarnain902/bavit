@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const SalesByLocation = () => {
   const locations = [
@@ -15,6 +16,19 @@ const SalesByLocation = () => {
           Export Report
         </button>
       </div>
+
+      {/* Map Image */}
+      <div className="w-full h-64 rounded-lg mb-5 overflow-hidden">
+        <Image
+          src="/map.png"
+          alt="Map"
+          layout="responsive"
+          width={700}
+          height={400}
+          className="rounded-lg"
+        />
+      </div>
+
       <div>
         {locations.map((loc, i) => (
           <div key={i} className="mb-4">
