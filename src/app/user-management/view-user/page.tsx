@@ -7,11 +7,36 @@ import UnifiedTable from "@/components/UnifiedTable";
 
 export default function ViewUserCategory() {
   const [categories] = useState([
-    { id: 1, role: "packer", description: "The packer is for packaging items.", status: "Active" },
-    { id: 2, role: "assembly team", description: "Assembly Team Assembly Team Assembly Team", status: "Active" },
-    { id: 3, role: "delivery", description: "Responsible for delivering items.", status: "Inactive" },
-    { id: 4, role: "manager", description: "Supervises entire operations.", status: "Active" },
-    { id: 5, role: "quality checker", description: "Ensures product quality.", status: "Active" },
+    {
+      id: 1,
+      role: "packer",
+      description: "The packer is for packaging items.",
+      status: "Active",
+    },
+    {
+      id: 2,
+      role: "assembly team",
+      description: "Assembly Team Assembly Team Assembly Team",
+      status: "Active",
+    },
+    {
+      id: 3,
+      role: "delivery",
+      description: "Responsible for delivering items.",
+      status: "Inactive",
+    },
+    {
+      id: 4,
+      role: "manager",
+      description: "Supervises entire operations.",
+      status: "Active",
+    },
+    {
+      id: 5,
+      role: "quality checker",
+      description: "Ensures product quality.",
+      status: "Active",
+    },
   ]);
 
   return (
@@ -22,18 +47,21 @@ export default function ViewUserCategory() {
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-bold">View Users</h1>
           <div className="flex items-center space-x-3">
-            <span className="bg-gray-200 text-gray-800 px-3 py-1 rounded-lg">SUPER ADMIN</span>
+            <span className="bg-gray-200 text-gray-800 px-3 py-1 rounded-lg">
+              SUPER ADMIN
+            </span>
           </div>
         </div>
 
-        <p className="text-gray-600 mb-4">
-          View details of all the teams
-        </p>
+        <p className="text-gray-600 mb-4">View details of all the teams</p>
 
         {/* Search & Add Button */}
         <div className="flex justify-between items-center mb-6">
           <div className="relative w-1/2">
-            <Search className="absolute left-3 top-2.5 text-gray-400" size={20} />
+            <Search
+              className="absolute left-3 top-2.5 text-gray-400"
+              size={20}
+            />
             <input
               type="text"
               placeholder="Search categories..."
@@ -41,10 +69,10 @@ export default function ViewUserCategory() {
             />
           </div>
           <Link
-            href="/user-management/add-user-category"
+            href="/user-management/add-user"
             className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg shadow"
           >
-            + Add User Category
+            + Add User
           </Link>
         </div>
 

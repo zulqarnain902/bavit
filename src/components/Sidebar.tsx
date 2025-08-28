@@ -14,14 +14,16 @@ const Sidebar = () => {
         </Link>
 
         {/* Users Section */}
-        <details className="group">
+        <details className="group" open>
           <summary className="flex items-center justify-between cursor-pointer hover:bg-red-700 p-2 rounded list-none">
             2. Users
             <span className="transition-transform duration-200 group-open:rotate-90">
               <SlArrowRight />
             </span>
           </summary>
-          <ul className="ml-4 space-y-1 mt-1">
+          <ul className="ml-4 mt-1 space-y-2">
+            {" "}
+            {/* Increased spacing here */}
             <Link href="/user-management/view-user-category">
               <li className="cursor-pointer hover:text-red-300">
                 2.1 View User Category
@@ -32,7 +34,7 @@ const Sidebar = () => {
                 2.2 View Teams
               </li>
             </Link>
-            <Link href="/user-management/view-users">
+            <Link href="/user-management/view-user">
               <li className="cursor-pointer hover:text-red-300">
                 2.3 View Users
               </li>
@@ -48,7 +50,9 @@ const Sidebar = () => {
               <SlArrowRight />
             </span>
           </summary>
-          <ul className="ml-4 space-y-1 mt-1">
+          <ul className="ml-4 mt-1 space-y-2">
+            {" "}
+            {/* Increased spacing */}
             <Link href="/">
               <li className="cursor-pointer hover:text-red-300">
                 3.1 View Suppliers Category
@@ -72,23 +76,25 @@ const Sidebar = () => {
         <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
           6. Shipping & Labels
         </p>
+        <p className="cursor-pointer hover:bg-red-700 p-2 rounded">7. Oders</p>
         <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
-          7. Delivery
+          8. Shipping & label
         </p>
         <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
-          8. Replacements
+          9. Delivery
         </p>
         <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
-          9. Complaints
+          10. Replacement
         </p>
         <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
-          10. Ticketing
+          11. Complaint
         </p>
         <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
-          11. Customer Tracking
+          12. Ticketing
         </p>
-
-        {/* Newly Added Sections */}
+        <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
+          13. Customer Tracking
+        </p>
         <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
           14. HR Management
         </p>
