@@ -1,11 +1,20 @@
 import Link from "next/link";
 import { SlArrowRight } from "react-icons/sl";
 
+import Image from "next/image";
+
 const Sidebar = () => {
   return (
-    <aside className="w-64 bg-[#731717] text-white flex flex-col p-4 fixed top-0 left-0 h-screen overflow-y-auto scrollbar-thin scrollbar-thumb-red-700 scrollbar-track-[#731717]">
-      <h4 className="text-1rem text-blue-300 font-bold mb-6">BUILD MY RIG</h4>
-      <nav className="space-y-3">
+    <aside className="w-64 bg-[#731717] text-white flex flex-col fixed top-0 left-0 h-screen">
+      <nav className="mt-16 flex-1 space-y-3 p-4 overflow-y-scroll ">
+        {/* Header */}
+        <div className=" p-4 border-b border-red-800">
+          <div className="flex items-center justify-between">
+            <span className="text-xs text-muted-foreground font-semibold text-blue-300">
+              BUILD MY RIG
+            </span>
+          </div>
+        </div>
         {/* Dashboard */}
         <Link href="/">
           <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
@@ -21,7 +30,7 @@ const Sidebar = () => {
               <SlArrowRight />
             </span>
           </summary>
-          <ul className="ml-4 mt-1 space-y-2">
+          <ul className="ml-4 mt-1 flex flex-col items-start gap-1.5 ">
             {" "}
             {/* Increased spacing here */}
             <Link href="/user-management/view-user-category">
