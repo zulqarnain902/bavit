@@ -19,7 +19,6 @@ export default function AddTeam() {
       [e.target.name]: e.target.value,
     });
   };
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);

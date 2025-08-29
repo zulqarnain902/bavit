@@ -4,7 +4,7 @@ import { SlArrowRight } from "react-icons/sl";
 const Sidebar = () => {
   return (
     <aside className="w-64 bg-[#731717] text-white flex flex-col fixed top-0 left-0 h-screen">
-      <nav className="mt-16 flex-1 space-y-3 p-4 overflow-y-scroll ">
+      <nav className="mt-15 flex-1 space-y-3 p-4 overflow-y-scroll scrollbar-thin scrollbar-thumb-[#731717] scrollbar-track-red-200 ">
         {/* Header */}
         <div className=" p-4 border-b border-red-800">
           <div className="flex items-center justify-between">
