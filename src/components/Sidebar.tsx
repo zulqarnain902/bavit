@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { SlArrowRight } from "react-icons/sl";
 
-import Image from "next/image";
-
 const Sidebar = () => {
   return (
     <aside className="w-64 bg-[#731717] text-white flex flex-col fixed top-0 left-0 h-screen">

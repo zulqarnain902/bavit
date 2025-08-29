@@ -1,10 +1,8 @@
 import React from "react";
 import { ComposedChart } from "recharts";
 import {
-  BarChart,
   Bar,
   Line,
-  LineChart,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -36,7 +34,9 @@ const DashboardStats = () => {
       <div className="flex justify-between items-center mb-5">
         <h2 className="text-xl font-semibold text-gray-700">Revenue</h2>
         <div className="flex gap-2">
-          <button className="bg-blue-100 text-blue-600 px-3 py-1 rounded-md">ALL</button>
+          <button className="bg-blue-100 text-blue-600 px-3 py-1 rounded-md">
+            ALL
+          </button>
           <button className="bg-gray-100 px-3 py-1 rounded-md">1M</button>
           <button className="bg-gray-100 px-3 py-1 rounded-md">6M</button>
           <button className="bg-gray-100 px-3 py-1 rounded-md">1Y</button>
@@ -73,7 +73,12 @@ const DashboardStats = () => {
           <Legend />
           <Bar dataKey="earnings" fill="#00b894" />
           <Line type="monotone" dataKey="orders" stroke="#d63031" />
-          <Line type="monotone" dataKey="refunds" stroke="#ff7675" strokeDasharray="5 5" />
+          <Line
+            type="monotone"
+            dataKey="refunds"
+            stroke="#ff7675"
+            strokeDasharray="5 5"
+          />
         </ComposedChart>
       </ResponsiveContainer>
     </div>

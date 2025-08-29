@@ -1,0 +1,8 @@
+tests/.DS_Store
+tests/**/*.test.js
+tests/**/*.test.ts
+*.log
+*.tmp
+*.cache
+playwright-report/
+node_modules/

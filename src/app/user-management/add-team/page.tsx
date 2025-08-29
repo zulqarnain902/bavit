@@ -1,6 +1,4 @@
 "use client";
-import Link from "next/link";
-import { Search } from "lucide-react";
 import Sidebar from "@/components/Sidebar";
 import { useState } from "react";
 
@@ -11,14 +9,18 @@ export default function AddTeam() {
     description: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
     alert("Team added successfully!");
@@ -86,7 +88,7 @@ export default function AddTeam() {
                 placeholder="Enter team description"
                 value={formData.description}
                 onChange={handleChange}
-                rows="3"
+                rows={3}
                 className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#C4310C] focus:border-[#C4310C]"
               />
             </div>

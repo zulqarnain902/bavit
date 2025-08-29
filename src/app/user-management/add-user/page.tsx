@@ -1,9 +1,6 @@
 "use client";
-import Link from "next/link";
-import { Search } from "lucide-react";
 import Sidebar from "@/components/Sidebar";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
 import { Eye, EyeOff } from "lucide-react";
 
 export default function AddUser() {
