@@ -11,17 +11,14 @@ interface TableProps {
     status: string;
   }>;
 }
-
 const UnifiedTable: React.FC<TableProps> = ({ data }) => {
   const [records, setRecords] = useState(data);
   const [filterText, setFilterText] = useState("");
 
-  // Delete Handler
   const handleDelete = (id: number) => {
     setRecords(records.filter((record) => record.id !== id));
   };
 
-  // Table Columns
   const columns: TableColumn<{
     id: number;
     role: string;
@@ -80,7 +77,6 @@ const UnifiedTable: React.FC<TableProps> = ({ data }) => {
     },
   ];
 
-  // Filtered Records
   const filteredRecords = records.filter(
     (item) =>
       item.role.toLowerCase().includes(filterText.toLowerCase()) ||
@@ -88,7 +84,6 @@ const UnifiedTable: React.FC<TableProps> = ({ data }) => {
       item.status.toLowerCase().includes(filterText.toLowerCase())
   );
 
-  // Custom Styles
   const customStyles = {
     headCells: {
       style: {

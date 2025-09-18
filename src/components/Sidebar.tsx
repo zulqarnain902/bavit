@@ -21,33 +21,9 @@ const Sidebar = () => {
         </Link>
 
         {/* Users Section */}
-        <details className="group" open>
-          <summary className="flex items-center justify-between cursor-pointer hover:bg-red-700 p-2 rounded list-none">
-            2. Users
-            <span className="transition-transform duration-200 group-open:rotate-90">
-              <SlArrowRight />
-            </span>
-          </summary>
-          <ul className="ml-4 mt-1 flex flex-col items-start gap-1.5 ">
-            {" "}
-            {/* Increased spacing here */}
-            <Link href="/user-management/view-user-category">
-              <li className="cursor-pointer hover:text-red-300">
-                2.1 View User Category
-              </li>
-            </Link>
-            <Link href="/user-management/view-teams">
-              <li className="cursor-pointer hover:text-red-300">
-                2.2 View Teams
-              </li>
-            </Link>
-            <Link href="/user-management/view-user">
-              <li className="cursor-pointer hover:text-red-300">
-                2.3 View Users
-              </li>
-            </Link>
-          </ul>
-        </details>
+        <Link href="/">
+          <p className="cursor-pointer hover:bg-red-700 p-2 rounded">2. User</p>
+        </Link>
 
         {/* Suppliers Section */}
         <details className="group">
@@ -102,9 +78,34 @@ const Sidebar = () => {
         <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
           13. Customer Tracking
         </p>
-        <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
-          14. HR Management
-        </p>
+        {/* Users Section */}
+        <details className="group" open>
+          <summary className="flex items-center justify-between cursor-pointer hover:bg-red-700 p-2 rounded list-none">
+            14. HR Management
+            <span className="transition-transform duration-200 group-open:rotate-90">
+              <SlArrowRight />
+            </span>
+          </summary>
+          <ul className="ml-4 mt-1 flex flex-col items-start gap-1.5 ">
+            {" "}
+            {/* Increased spacing here */}
+            <Link href="/user-management/view-user-category">
+              <li className="cursor-pointer hover:text-red-300">
+                14.1 View User Category
+              </li>
+            </Link>
+            <Link href="/user-management/view-teams">
+              <li className="cursor-pointer hover:text-red-300">
+                14.2 View Teams
+              </li>
+            </Link>
+            <Link href="/user-management/view-user">
+              <li className="cursor-pointer hover:text-red-300">
+                14.3 View Users
+              </li>
+            </Link>
+          </ul>
+        </details>
         <p className="cursor-pointer hover:bg-red-700 p-2 rounded">
           15. Accounting
         </p>

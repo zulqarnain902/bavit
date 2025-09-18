@@ -8,12 +8,25 @@ import BestSellingProducts from "@/components/BestSellingProducts";
 import TopSellers from "@/components/TopSellers";
 import StoreVisitsChart from "@/components/StoreVisitsChart";
 import RecentOrders from "@/components/RecentOrders";
+import { useState, useEffect } from "react";
 
 export default function Dashboard() {
+  const [stats, setStats] = useState([]);
+  useEffect(() => {
+    const fetchStats = async () => {
+      try {
+        const response = await fetch("http://localhost:3001/api/stats");
+        const data = await response.json();
+        setStats(data);
+      } catch (error) {
+        console.error("Error fetching stats:", error);
+      }
+    };
+    fetchStats();
+  }, []);
   return (
     <div className="flex min-h-screen w-full bg-gray-100 overflow-auto">
       <Sidebar />
-
       <div className="flex-1 p-6 ml-64">
         <div className="flex justify-between items-center mb-6  ">
           <h2 className="text-lg font-semibold">Good Morning, Build My Rig!</h2>
@@ -26,7 +39,6 @@ export default function Dashboard() {
             <User className="w-6 h-6 text-gray-600" />
           </div>
         </div>
-
         <div className="grid grid-cols-4 gap-4 mb-6">
           {[
             { title: "Total Earnings", value: "$560.0k", change: "+16.24%" },

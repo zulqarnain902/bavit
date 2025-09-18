@@ -19,7 +19,6 @@ const Header: React.FC<HeaderProps> = ({ onToggleSidebar, onExpand }) => {
           >
             <Menu size={24} className="text-gray-700" />
           </button>
-
           <div className="flex items-center gap-2">
             <Image
               src="/logo.png"

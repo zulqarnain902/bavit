@@ -1,9 +1,12 @@
 "use client";
-
 import "./globals.css";
 import Header from "@/components/header";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const handleToggleSidebar = () => {
     console.log("Sidebar toggled");
   };
