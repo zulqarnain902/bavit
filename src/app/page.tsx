@@ -6,7 +6,6 @@ import SalesByLocation from "../components/SalesByLocation";
 import Sidebar from "../components/Sidebar";
 import BestSellingProducts from "@/components/BestSellingProducts";
 import TopSellers from "@/components/TopSellers";
-import StoreVisitsChart from "@/components/StoreVisitsChart";
 import RecentOrders from "@/components/RecentOrders";
 import { useState, useEffect } from "react";
 
@@ -71,13 +70,9 @@ export default function Dashboard() {
             <TopSellers />
           </div>
         </div>
-        <div className="bg-gray-50 grid grid-cols-2 gap-6 mt-6">
-          <div className="lg:col-span-1">
-            <StoreVisitsChart />
-          </div>
-          <div className="lg:col-span-1">
-            <RecentOrders />
-          </div>
+
+        <div className="lg:col-span-1">
+          <RecentOrders />
         </div>
       </div>
     </div>
